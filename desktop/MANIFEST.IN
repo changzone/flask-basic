@@ -1,3 +1,0 @@
-graft desktop/templates
-graft desktop/static
-include desktop/schema.sql

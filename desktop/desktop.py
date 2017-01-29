@@ -14,3 +14,27 @@ app.config.update(dict(
     PASSWORD='default'
 ))
 app.config.from_envvar('DESKTOP_SETTINGS', silent=True)
+
+
+# DB Connections
+def get_db():
+    """Opens a new DB connection, checks if one exists"""
+    """
+    if not hasattr(g, 'dbconnect_db'):
+        g.dbconnect = connect_db()
+    return g.dbconnect
+        """
+    pass
+
+@app.teardown_appcontext
+def close_db(error):
+    """closes the db again at end of the request. """
+    """
+    if hasattr(g, 'dbconnect_db'):
+        g.dbconnect.close()
+
+    """
+    pass
+
+def connect_db():
+    pass
